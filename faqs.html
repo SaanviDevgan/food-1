@@ -1,1 +1,75 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FAQS</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body{background-color: #;}
+      header{width: 100%; height: 100px; background-color: #; Text-align: center;}
+      footer{width: 100%; height: 70px; font-size: 20px; background-color: #; text-align: center; padding: 10px;}
+      nav ul li{list-style-type: none; display: inline-block; font-weight: bold; font-size: 25px;}
+      nav ul li a{text-decoration: none; color: #; font-size: 20px; margin: 10px;}
+      .divClass{text-align: center; padding: 45px; width: 1250px; height: 700px;}
+      .divClass h1{margin-left: 175px;}
+      .faq{padding: 34px; border: 3px solid #; margin-left: 200px;}
+      .faq ul li{list-style-type: none;}
+      .question{position: relative; margin: 10px; cursor: pointer;}
+      .answer{display: none; padding: 5px; font-size: 18px;}
+      .question span{position: absolute; display: inline-block; top: 11px; right: 250px;}
+    </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+<script type="text/javascript">
+  
+$(document).ready(function(){
+$('.question').click(function(){
+  var $answer= $(this).find('.answer');
+  if ($answer.hasClass('open')){
+   $answer.removeClass('open')
+    $answer.slideUp();
+    $(this).find('span').text('+');
+  } 
+  else{
+    $answer.addClass('open')
+    $answer.slideDown();
+     $(this).find('span').text('-');
+  }
+});
+});
+    </script>
+  </head>
+  <body>
+<header>
+<h1>Madagascar</h1> 
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li> |
+      <li><a href=""></a></li> |
+      <li><a href="faqs.html">FAQ</a></li> 
+    </ul>
+  </nav>
+</header>
+    <main>
+      <div class="divClass">
+        <h1>FAQ</h1>
+        <div class="faq">
+          <ul>
+            <li class="question"><h2></h2> <span>+</span>
+              <div class="answer"><p></p></div>
+            </li>  
+            <li class="question"><h2></h2> <span>+</span>
+              <div class="answer"><p></p></div>
+            </li>  
+             <li class="question"><h2></h2> <span>+</span>
+              <div class="answer"><p></p></div>
+            </li>  
+            <li class="question"><h2></h2> <span>+</span>
+              <div class="answer"><p></p></div>
+            </li>  
+          </ul>        
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
