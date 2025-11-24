@@ -16,6 +16,13 @@
       .question{position: relative; margin: 10px; cursor: pointer;}
       .answer{display: none; padding: 5px; font-size: 18px;}
       .question span{position: absolute; display: inline-block; top: 11px; right: 250px;}
+      .wrapper{position: absolute; top: 175px; left: 500px; width: 500px; padding: 25px; background-color: #F5FFFA;}
+      .wrapper h2{text-align: center; letter-spacing: 3px;}
+      .wrapper .inputfield{margin-bottom: 10px;}
+      .wrapper input{width: 95%; padding: 10px;}
+      .wrapper textarea{width: 95%; padding: 10px; height: 70px;}
+      .wrapper .btn input[type= "submit"]{width: 100%; background-color: #8FBC8F; letter-spacing: 3px; font-weight: bold; cursor: pointer;}
+      #error{background-color: #CD5C5C; text-align: center; font-size: 16px;}
     </style>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
@@ -35,7 +42,39 @@ $('.question').click(function(){
      $(this).find('span').text('-');
   }
 });
-});
+  function validate(){
+var name1=document.getElementById("name").value;
+var phone1=document.getElementById("phone").value;
+var email1=document.getElementById("email").value;
+var message1=document.getElementById("message").value;
+
+        if(name1.length<5){
+          text="Please enter your full name";
+          error.innerHTML=text;
+          return false;
+      }
+
+        if(isNaN(phone1) || phone1.length!=10){
+          text="Please enter a vaild phone number";
+          error.innerHTML=text;
+          return false;
+        }
+
+        if(email1.indexOf("@")==-1 || email1.length<6){
+            text="Please enter a vaild email";
+          error.innerHTML=text;
+          return false;
+        }
+
+        if(message1.length<=10){
+            text="Please enter more than 10 characters";
+          error.innerHTML=text;
+          return false;
+        }
+
+        alert("Form submitted successfully")
+        return true;
+      }
     </script>
   </head>
   <body>
@@ -70,6 +109,33 @@ $('.question').click(function(){
         </div>
       </div>
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4Ib3LojGFnRlICltkwIQwKus1Ona2WVbLQA&s" width= 100%>
+      <div class="wrapper">
+       <h2>Contact Us</h2>
+       <form class="form2" onsubmit="return validate();" name="LoginForm" method="post"
+        action=>
+         <div class="inputfield">
+           <input type="text" placeholder="Name" id="name">
+         </div>
+
+          <div class="inputfield">
+           <input type="text" placeholder="Phone" id="phone">
+         </div>
+
+          <div class="inputfield">
+           <input type="text" placeholder="Email" id="email">
+         </div>
+
+          <div class="inputfield">
+           <textarea placeholder="Message" id="message"></textarea>
+         </div>
+
+         <div class="btn">
+           <input type="submit">
+         </div>
+
+         <div id="error"></div>
+       </form>
+     </div>
     </main>
   </body>
 </html>
