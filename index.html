@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Website - Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #FFF4E1;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #FFA07A, #FF7F50);
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    nav ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    /* Banner */
+    .banner {
+      width: 100%;
+      height: 350px;
+      background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+      background-size: cover;
+      background-position: center;
+      border-bottom: 5px solid #FF7F50;
+    }
+
+    /* Content Boxes */
+    .content-section {
+      width: 80%;
+      margin: 40px auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .box {
+      flex: 1;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 9px 18px rgba(0,0,0,0.15);
+    }
+
+    .box h3 {
+      margin-bottom: 10px;
+      color: #FF7F50;
+    }
+
+    .box p {
+      font-size: 17px;
+    }
+
+    footer {
+      background-color: #FF7F50;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Healthy Foods</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li> |
+      <li><a href="table.html">Information</a></li> |
+      <li><a href="faqs.html">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="banner"></div>
+
+<div class="content-section">
+
+  <div class="box">
+    <h3>Learn About Nutrients</h3>
+    <p>Discover the nutrients in the food pyramid and why they are important for your health.</p>
+  </div>
+
+  <div class="box">
+    <h3>Healthy Eating</h3>
+    <p>Explore which foods keep your body strong, active, and growing well.</p>
+  </div>
+
+  <div class="box">
+    <h3>Interactive FAQ</h3>
+    <p>Got questions? Our FAQ explains healthy vs unhealthy foods in a simple way.</p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 Healthy Food Project
+</footer>
+
+</body>
+</html>
 
